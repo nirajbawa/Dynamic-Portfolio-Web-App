@@ -1,0 +1,55 @@
+<div id="interpersonalSkills">
+
+
+    <div id="inbox" style="    justify-content: space-around;     height: 100%;">
+
+        <%cData.forEach((value)=>{%>
+            <div class="row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                    <div class="card fccard" style="    width: 40rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Sended By : <%=value.email%></h5>
+                            <p class="card-text">
+                                <br>
+                                <b>Mo.No : </b> <%=value.mono%>
+                                <br>
+                                <br>
+                                <b>Message : </b>
+                                <%=value.message%>
+                                <br>
+                                <br>
+                                <b>Timestamp : </b><%=value.timestamp%>
+                                <br>
+                                <br>
+                            </p>
+                            <a href="/admin/panel/forms/contact/<%=value._id%>" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%});%>
+
+                <script>
+                    let editcarde = (id, imgurl, message, vi, title, timeperiod, cpurl) => {
+                        let model = document.getElementById("addinterpersonalSkills");
+                        model.setAttribute("action", `/admin/panel/settings/experience/${id}`);
+                        document.getElementById("exampleModalLabel").innerText = "Edit";
+
+                        document.getElementById("imgName").value = imgurl;
+                        document.getElementById("floatingTextarea2").value = message;
+                        document.getElementById("title").value = title;
+                        document.getElementById("timeperiod").value = timeperiod;
+                        document.getElementById("cpurl").value = cpurl;
+                        document.getElementById("visibility").value = vi == 'true' ? '1' : '0';
+                        document.getElementById("projecturl").value = projecturl;
+                    }
+                </script>
+
+
+            </div>
+
+
+
+
+
+    </div>

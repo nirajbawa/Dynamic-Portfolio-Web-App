@@ -1,0 +1,92 @@
+<div id="interpersonalSkills">
+
+    <ul id="innav">
+        <button type="button" class="btn btn-primary" onclick="freset()" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Add New
+        </button>
+    </ul>
+    <div id="inbox">
+   
+
+      <% gISdata.forEach( value=>{ %>
+            <div class="card" style="width: 18rem; box-shadow: 0px 0px 9px 4px #dad1d133;">
+              <img src="/images/icons/<%=value.imageurl%>" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text"><%=value.message%></p>
+                <br>
+                <p style="text-transform:capitalize;"><b>Visibility : <%=value.visibility==true?'public':'private'%></b></p>
+              </div>
+              <button type="button" class="btn btn-primary" onclick="editcard('<%=value._id%>', '<%=value.imageurl%>', '<%=value.message%>', '<%=value.visibility%>')" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Edit
+            </button>
+              <button type="button" class="btn btn-outline-danger"><a href="/admin/panel/settings/interpersonalSkills/<%=value._id%>" style="text-decoration: none; text-transform:capitalize; color:rgb(0, 0, 0);">delete</a></button>
+            </div>
+        <%})%>
+
+
+        <script>
+          
+          let editcard = (id, imgurl, message ,vi) =>{
+            let model = document.getElementById("addinterpersonalSkills");
+            model.setAttribute("action", `/admin/panel/settings/interpersonalSkills/${id}`);
+            document.getElementById("exampleModalLabel").innerText = "Edit";
+            console.log(id);
+            console.log(imgurl);
+            console.log(message);
+            console.log(vi);
+            document.getElementById("imgName").value = imgurl;
+            document.getElementById("floatingTextarea2").value = message;
+            document.getElementById("visibility").value = vi=='true'?'1':'0';
+          }
+
+          let freset = ()=>{
+            console.log("fn called");
+            let form = document.getElementById("addinterpersonalSkills");
+            form.reset();
+        }
+        </script>
+
+    </div>
+
+
+     <!-- Modal -->
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Add New</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form action="/admin/panel/settings/interpersonalSkills" method="POST" id="addinterpersonalSkills">
+            <div class="modal-body">
+             
+                <div class="d-grid gap-2 mb-3">
+                    <button class="btn btn-primary" id="ImageUploader" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Image Uploader</button>
+                    
+                  </div>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="imgName" name="imageurl" placeholder="name@example.com" readonly="readonly" required>
+                    <label for="floatingInput">Cover Image Name</label>
+                  </div>
+                  <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="message" style="height: 13rem; resize:none;" required></textarea>
+                    <label for="floatingTextarea2">message</label>
+                  </div>
+                  <select class="form-select" aria-label="Default select example" name="visibility" required id="visibility">
+                    <option value = "1" selected>Public</option>
+                    <option value="0">Private</option>
+                  </select>
+             
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Save changes</button>
+            </div>
+          </form>
+          </div>
+        </div>
+      </div>
+      
+
+
+</div>

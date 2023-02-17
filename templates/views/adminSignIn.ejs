@@ -1,0 +1,41 @@
+<%- include("../partials/admin_auth/header.ejs") %>
+
+  <div class="container">
+
+    <form action="/admin/signin" method="post">
+      <h1>
+        Admin Sign In
+      </h1>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="email"
+          required>
+        <label for="floatingInput">Email address</label>
+      </div>
+
+ 
+
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" minlength="8"
+          name="password" oninvalid="this.setCustomValidity('Please make sure length of password is grater than 8 characters')"
+          oninput="this.setCustomValidity('')" autocomplete="off" required>
+        <label for="floatingPassword">Password</label>
+      </div>
+
+      <a href="/admin/forgotpassword">Forgot Password</a>
+
+      <% if(Msg){ %>
+        <p style="color:red; padding:0% 1%; text-transform:capitalize; margin:0%">
+          <%=Msg%>
+        </p>
+        <%}%>
+
+
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-success" style="font-size: 21px;">Sign In</button>
+          </div>
+
+    </form>
+
+  </div>
+
+  <%- include("../partials/admin_auth/footer.ejs") %>

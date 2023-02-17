@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 93.5%;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container form{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: aliceblue;
+    padding: 3.5rem;
+    border-radius: 4%;
+    box-shadow: 1px 1px 24px -13px #776b6b2b;
+}
+
+.container form h1{
+    text-align: center;
+    text-transform: uppercase;
+    background: aliceblue;
+    padding: 3%;
+}
+
+@media only screen and (max-width: 420px) {
+    html{
+        font-size: 62.5%;
+    }
+}

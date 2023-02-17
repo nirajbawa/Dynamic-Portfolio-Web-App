@@ -1,0 +1,51 @@
+
+
+<%- include("../partials/admin_auth/header.ejs") %>
+
+    <div class="container">
+
+      <form action="/admin/signup" style="gap: 1.5rem" method="post">
+        <h1>
+          Admin Sign Up
+        </h1>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="Fname" required>
+          <label for="floatingInput">Full Name</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="Email" required>
+            <label for="floatingInput">Email address</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="tel" class="form-control" id="floatingInput" placeholder="name@example.com" autocomplete="off" name="mobile" required>
+            <label for="floatingInput">mobile</label>
+          </div>
+
+          
+            <% if(errorMsg){ %>
+              <p style="color:red; padding:0% 1%; text-transform:capitalize;"><%=errorMsg%></p>
+            <%}%>
+         
+
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" minlength="8" oninvalid="this.setCustomValidity('Please make sure length of password is grater than 8 characters')" oninput="this.setCustomValidity('')" placeholder="Password" autocomplete="off" name="password" required>
+          <label for="floatingPassword">Password</label>
+        </div>
+
+        
+        
+
+        <div class="d-grid gap-2">
+        <button type="submit" class="btn btn-success" style="font-size: 21px;">Sign Up</button>
+      </div>
+
+      </form>
+
+    </div>
+
+
+
+<%- include("../partials/admin_auth/footer.ejs") %>
+

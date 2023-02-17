@@ -1,0 +1,53 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 92.5%;
+}
+
+.mainbox{
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#bc{
+    height: 45rem;
+}
+
+.ldiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@media only screen and (max-width: 750px) {
+    html {
+        font-size: 50.5%;
+    }
+
+    .mainbox{
+        height: 55vh;
+    }
+    .ldiv button{
+        font-size: 2.5rem;
+    }
+
+}
+
+
+@media only screen and (max-width: 280px) {
+    html {
+        font-size: 30%;
+    }
+    .mainbox {
+        height: 35vh;
+    }
+}

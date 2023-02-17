@@ -1,0 +1,146 @@
+#innav{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding: 2.5rem;
+    background: #f5fdff;
+    border-bottom: 1px solid #bababa;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0px;
+}
+
+#inbox {
+    width: 100%;
+    height: 66vh;
+    display: flex;
+    padding: 2rem;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 2rem 1rem;
+}
+
+.modal-dialog{
+    height: 100vh;
+    margin: 0;
+    max-width: initial;
+}
+
+.modal-content {
+    width: 100%;
+    height: 100vh;
+}
+
+.offcanvas{
+    z-index: 1000000;
+    border-bottom: 10px solid !important;
+    height: 100vh !important;
+}
+
+.offcanvas-backdrop{
+    z-index: 10000;
+}
+
+
+#pills-tab{
+    position: sticky;
+    top: -15px;
+    background: white;
+    padding: 1%;
+    z-index: 100;
+}
+
+#mainimgbox{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 5rem;
+    flex-wrap: wrap;
+    padding: 5%;
+}
+
+.imgbox{
+    width: 10rem;
+    background: #373737;
+    padding: 1rem;
+    gap: 1rem;
+    transition: all 0.5s ease-in-out;
+    height: 10rem;
+    overflow: hidden;
+}
+
+.imgdiv{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgbox img{
+    width: 100%;
+}
+
+
+.sdbtns{
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: none;
+    position: relative;
+    top: -8rem;
+    width: 100%;
+    height: 100%;
+    background: #00000073;
+    z-index: 1;
+}
+
+.sdbtns button{
+    width: 18rem;
+    background: transparent;
+    width: 3.2rem;
+    border: none;
+    transition: all 0.5s;
+}
+
+.imgbox:hover .sdbtns{
+    background-color: rgba(29, 29, 29, 0.449);
+    display: flex;
+}
+
+.imgbox:hover{
+    background-color: #83b2ff;
+}
+
+#UploderBoxMain{
+    display: flex;
+    width: 100%;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: capitalize;
+    flex-direction: column;
+}
+
+
+#UploderBoxMain form{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.card img{
+    background: #373737;
+    padding: 10%;
+}
+
+.card button{
+    margin: 1rem;
+}
+

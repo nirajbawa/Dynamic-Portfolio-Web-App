@@ -1,0 +1,83 @@
+<%- include("../partials/admin_auth/header.ejs") %>
+
+  <div class="container">
+
+    <form action="<%=url%>" method="post">
+      <h1>
+        Admin <%=btnName%>
+      </h1>
+      <div class="form-floating mb-3">
+        <input type="tel" class="form-control" id="floatingInput" placeholder="name@example.com" name="otp" autocomplete="off" required>
+        <label for="floatingInput">OTP</label>
+      </div>
+
+      <% if(errorMsg){ %>
+        <p style="color:red; padding:0% 1%; margin: 0px;" id="otpbox">
+          <%=errorMsg%>
+        </p>
+        <%}%>
+
+          <p style="color: rgb(69, 190, 255); padding:0% 1%; cursor:pointer;" id="sendotp"
+            onclick="sendOtpAgain();">Send OTP Again</p>
+
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-success" style="font-size: 21px;"><%=btnName%></button>
+          </div>
+
+    </form>
+
+  </div>
+
+  <script>
+    history.pushState(null, document.title, location.href);
+    history.back();
+    history.forward();
+    window.onpopstate = function () {
+      history.go(1);
+    };
+  </script>
+
+  <script>
+    let getsendbtn = document.getElementById("sendotp");
+    let timmer = () => {
+      let s = 60;
+      let m = 5;
+      
+      let interval = setInterval(function x() {
+
+        if (s == 0) {
+          m--;
+          s = 60;
+          if (m < 0) {
+            console.log("complete");
+            getsendbtn.innerHTML = "Send OTP Again";
+            clearInterval(interval);
+          }
+        }
+        else {
+          s--;
+          getsendbtn.innerHTML = `OTP sended valid for : 5 minutes ${m} : ${s}`;
+        }
+
+       
+
+
+      }, 1000);
+
+      return interval;
+    }
+
+    let sendOtpAgain = () => {
+
+      fetch("<%=otpurl%>", { method: "POST" })
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          timmer();
+          console.log(data);
+        })
+    }
+  </script>
+
+  <%- include("../partials/admin_auth/footer.ejs") %>

@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+* { user-select: none; }
+*::selection { background: none; }
+*::-moz-selection { background: none; }
+
+#mobilemenu
+{
+    display: none;
+}
+
+#navbar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: transparent;
+    position: fixed;
+    z-index: 1;
+    /* padding-top: 2px;
+    padding-bottom: 2px; */
+    transition: color 1 ease-in-out;
+}
+
+#left{
+    padding: 10px 12px;
+    padding-left: 40px;
+}
+
+h1 .niraj{
+    font-family: 'Hind Siliguri', sans-serif;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 32px;
+    letter-spacing: 2px;
+    transition: color 0.20s linear;
+    text-shadow: 2px 3px 5px black;
+}
+
+
+
+#left h1 a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 30px;
+    word-spacing: 4px;
+    letter-spacing: 2px;
+    color: white;
+    font-family: 'Hind Siliguri', sans-serif;
+    transition: color 0.20s linear;
+    text-shadow: 2px 3px 5px black;
+}
+
+#right ul{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    list-style: none;
+    padding-right: 20px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+#right ul li{
+    display: flex;
+    flex-direction: column;
+} 
+
+.lia{
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    padding: 15px 13px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: white;
+    transition: color 0.20s linear;
+    letter-spacing: 1.5 px;
+    text-shadow: 2px 3px 5px black;
+}
+
+/* #right ul li a:hover{
+    color: #00e5ff;
+} */
+
+
+.borderele{
+    display: block;
+    background-color: #00e5ff;
+    height: 2px;
+    width: 0%;
+}
+/* 
+#right ul li:focus .borderele{
+    transition: all 1s linear;
+    animation : hoveroutwidtchange 0.5s;
+} */
+
+#acli  .lia {
+    color: #00e5ff;
+  }
+
+
+
+#acli .borderele{
+    display: block;
+    width: 100%;
+    background-color: #00e5ff;
+    animation: none;
+    transition: all 1s linear;
+}
+
+.lia:hover{
+    color: #00e5ff;
+}
+
+@keyframes widthchange {
+    0%{
+        width: 0%;
+   
+    }
+    10%{
+        width: 10%;
+ 
+    }
+    20%{
+        width: 20%;
+      
+    }
+    30%{
+        width: 30%;
+     
+    }
+    40%{
+        width: 40%;
+  
+    }
+    50%{
+        width: 50%;
+    
+    }
+    60%{
+        width: 60%;
+ 
+    }
+    70%{
+        width: 70%;
+     
+    }
+    80%{
+        width: 80%;
+    
+    }
+    90%{
+        width: 90%;
+
+    }
+    100%{
+        width: 100%;
+
+    }
+}
+
+p{
+    margin: 0;
+}
+
+h3{
+    margin: 0;
+}
+
+ul{
+    margin: 0;
+}
+
+h1{
+    margin: 0;
+}
+
+button{
+    line-height: initial;
+}
+
+#leftH1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

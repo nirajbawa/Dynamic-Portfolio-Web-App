@@ -1,0 +1,46 @@
+<%- include("../partials/admin_panel/header.ejs") %>
+
+
+
+
+
+
+    <div id="leftmenubar">
+        <div>
+            contact form
+        </div>
+    </div>
+
+
+    <div id="rightmenubar">
+        <article id="mainBox">
+            main
+        </article>
+
+        <div>
+            <%- include("./contactForm.forms.ejs") %>
+        </div>
+
+    </div>
+
+
+    <script>
+        let addcss = (sheetName) =>{
+            let head2 = document.getElementsByTagName("HEAD")[0];
+            let link2 = document.createElement("link");
+            link2.rel = 'stylesheet';
+            link2.type = 'text/css';
+            // link2.href = 'css/' + homeFilename + '.css';
+            link2.href = sheetName;
+    
+            head2.appendChild(link2);
+        }
+
+        addcss("/css/adminSettings.css");
+
+        document.getElementsByClassName("nav-link")[1].classList.add("active");
+        
+    </script>
+
+
+    <%- include("../partials/admin_panel/footer.ejs") %>

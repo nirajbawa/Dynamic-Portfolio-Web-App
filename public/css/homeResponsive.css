@@ -1,0 +1,781 @@
+@media only screen and (max-width: 1024px) {
+
+    #mainTextspan {
+        font-size: 80px;
+    }
+
+    .homeText h4 {
+        font-size: 30px;
+    }
+
+    .cursor {
+        font-size: 84px;
+    }
+
+    .homeText h2 {
+        font-size: 25px;
+    }
+
+    .homeText {
+        line-height: 97px;
+    }
+
+    /* about element css */
+
+    .lower {
+        font-size: 12px;
+        gap: 20px;
+    }
+
+    .middel p {
+        line-height: 18px;
+        font-size: 11px;
+    }
+
+    .lower ul {
+        column-gap: 20px;
+    }
+
+    .upper p {
+        font-size: 10px;
+    }
+
+    .upper {
+        line-height: 18px;
+    }
+
+    #aboutmain {
+        margin-left: 13%;
+        margin-right: 7%;
+    }
+
+    .headerdiv h1 {
+        font-size: 22px;
+        width: 397px;
+    }
+
+    .upper h3 {
+        font-size: 23px;
+    }
+
+    .middel h3 {
+        font-size: 15px;
+    }
+
+    /* interpersonal Skills section */
+
+    .intmain ul{
+        padding: 12% 8% 5% 8%;
+    }
+
+    .intmain ul li{
+        font-size: 11px;
+    }
+
+}
+
+
+@media only screen and (max-width: 950px) {
+
+    #right ul li a{
+        font-size: 10px;
+    }
+
+    #right ul {
+        padding: 0%;
+    }
+
+        /* interpersonal Skills section */
+    .intmain ul li {
+        width: 300px;
+        height: 160px;
+    }
+    .intmain ul{
+        padding: 12% 6% 8% 6%;
+    }
+    .intmain ul {
+        gap: 5px 19px;
+    }
+
+    .item {
+        width: 93% !important;
+    }
+
+    .owl-carousel {
+        padding: 0% 0.0%;
+    }
+
+     /* projects css */
+
+     .expmain {
+        flex-direction: column;
+    }
+
+    #expl div {
+        display: none;
+    }
+
+    #expmainTitle {
+        padding: 10% 0% 0% 0%;
+    }
+
+    #expr {
+        padding: 9%;
+    }
+
+    /* contact css */
+   
+    #contmain {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .conright {
+        display: none;
+    }
+
+    .conleft h1{
+        display: block;
+        color: white;
+        text-align: center;
+    }
+
+    .conleft {
+        gap: 2rem;
+    }
+
+    
+}
+
+
+@media only screen and (max-width: 750px) {
+    #right ul li a{
+        font-size: 20px;
+    }
+    footer {
+        width: 100%;
+        flex-direction: row;
+        margin-left: 0px;
+        height: 15%;
+    }
+
+    footer div {
+        margin-left: 0px;
+        flex-direction: row;
+    }
+
+
+    footer div a i {
+        padding: 15px 30px;
+    }
+
+    #fp-nav {
+        margin-right: 0px;
+    }
+
+
+    #mainTextspan {
+        font-size: 65px;
+    }
+
+    .homeText h4 {
+        font-size: 31px;
+    }
+
+    .cursor {
+        font-size: 84px;
+    }
+
+    .homeText h2 {
+        font-size: 20px;
+    }
+
+    .homeText {
+        line-height: 97px;
+    }
+
+
+    #fp-nav {
+        display: none;
+    }
+
+    /* about element css */
+
+    #aboutmain {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    .headerdiv h1 {
+        font-size: 22px;
+        width: 255px;
+    }
+
+    .imgeandheading img {
+        border-radius: 0px 0px 200px 120px;
+        height: 283px;
+        width: 255px;
+    }
+
+    #aboutmain {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+
+    /* interpersonal Skills section */
+
+    .intmain ul {
+        padding: 25% 2% 21% 2%;
+    }
+    .intmain ul li {
+        width: 228px;
+        height: 135px;
+        line-height: 17px;
+        font-size: 8px;
+    }
+
+    .intmain ul li h3 img {
+        width: 40px;
+        height: 40px;
+    }
+    
+
+    .interpersonalSkillCard{
+        width: 293px;
+        height: 228px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+        border-radius: 37px;
+        color: white;
+        border: 3px solid #00e5ff;
+        padding: 6px 51px;
+        line-height: 25px;
+        text-align: center;
+        font-family: Roboto,sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        transition: all 0.5s;
+    }
+    
+    .item{
+        width: 100% !important;
+        height: 300px;
+    }
+    
+    
+    .owl-carousel{
+        padding: 0% 0%;
+        
+    }
+    
+    
+    
+    .owl-carousel .owl-dots.disabled, .owl-carousel .owl-nav.disabled:first-child{
+        display: block !important;
+    }
+
+
+
+ 
+
+
+
+
+}
+
+@media only screen and (max-width: 600px) {
+    .headerdiv h1 {
+        font-size: 11px;
+        width: 32%;
+    }
+
+    .imgeandheading img {
+        border-radius: 0px 0px 200px 120px;
+        height: 158px;
+        width: 137px;
+    }
+
+        /* interpersonal Skills section */
+
+    .intmain ul li {
+        padding: 0px 10px;
+    }
+
+    .intmain ul {
+        padding: 39% 2% 37% 2%;
+    }
+    .intmain ul li:nth-child(2) {
+    padding: 0px 8px;
+}
+
+.intmain ul li {
+    width: 192px;
+    height: 121px;
+    line-height: 11px;
+    font-size: 6px;
+}
+
+.intmain ul li:nth-child(4) {
+    padding: 35px 9px;
+}
+
+.intmain ul li h3 img {
+    width: 30px;
+    height: 30px;
+}
+
+#expr {
+    padding: 0%;
+}
+
+#expmainTitle {
+    padding: 21% 0% 0% 0%;
+}
+
+.expmain {
+    gap: 5rem;
+}
+
+}
+
+@media only screen and (max-width: 420px) {
+
+    #right ul li a {
+        font-size: 20px;
+    }
+
+    #mainTextspan {
+        font-size: 40px;
+    }
+
+    .homeText h4 {
+        font-size: 19px;
+    }
+
+    .cursor {
+        font-size: 50px;
+    }
+
+    .homeText h2 {
+        font-size: 14px;
+    }
+
+    .homeText {
+        line-height: 99px;
+    }
+
+    .textarea {
+        flex-direction: column;
+    }
+
+    .imgeandheading {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .headerdiv {
+        padding: 0% 0px 0% 0%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .headerdiv {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* about element css */
+    #aboutmain {
+        margin-top: 0px;
+    }
+
+    .imgeandheading img {
+        border-radius: 0px 0px 200px 120px;
+        height: 220px;
+        width: 202px;
+    }
+
+    .headerdiv h1 {
+        font-size: 14px;
+        width: 54%;
+    }
+
+    .divupper {
+        gap: 10px;
+    }
+
+    .divupper {
+        padding: 3% 5%;
+        gap: 20px;
+    }
+
+
+    .absocial ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .upper h3 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #aboutmain {
+        margin-top: 75px;
+    }
+
+    .imgeandheading img {
+        border-radius: 0px 0px 179px 179px;
+    }
+
+    .divupper {
+        text-align: center;
+    }
+
+    /* professional skill section */
+
+    #ipstitle {
+        font-size: 25px;
+    }
+
+
+      /* projects css */
+
+      .fp-slides {
+        height: 38rem;
+    }
+
+    .expcacard div {
+ 
+        align-items: center;
+    }
+
+    .expa {
+        flex-direction: column;
+    }
+    .expara {
+        height: auto;
+        overflow: hidden;
+    }
+    .ctbtn {
+        text-align: center;
+    }
+    .expmain {
+        gap: 1rem;
+    }
+
+    .expcacard {
+        padding: 9%;
+    }
+
+}
+
+
+
+
+
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+/* about element css */
+    .imgeandheading img {
+        height: 151px;
+        width: 149px;
+    }
+
+    .headerdiv h1 {
+        font-size: 14px;
+        width: 41%;
+    }
+
+    .upper h3 {
+        font-size: 20px;
+    }
+
+    .divupper {
+        padding: 4% 3%;
+        gap: 4px;
+    }
+
+    .upper {
+        gap: 10px;
+    }
+
+    .middel {
+        gap: 5px;
+    }
+
+    .lower {
+        margin-top: 3%;
+    }
+
+}
+
+/* @media only screen and (max-width: 800px) {
+    .lower {
+        margin-top: 0%;
+    }
+    .headerdiv h1 {
+        width: 38%;
+        font-size: 12px;
+    }
+    .imgeandheading img {
+        height: 124px;
+        width: 124px;
+    }
+} */
+
+
+
+
+@media screen and (device-width: 320px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
+
+    /* about element css */
+    .lower {
+        margin-top: 0%;
+    }
+
+    .headerdiv h1 {
+        width: 38%;
+        font-size: 12px;
+    }
+
+    .imgeandheading img {
+        height: 124px;
+        width: 124px;
+    }
+}
+
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+/* about element css */
+    #aboutmain {
+        margin-left: 3%;
+        margin-right: 2%;
+    }
+
+    .textarea {
+        flex-direction: column;
+    }
+
+    .imgeandheading img {
+        border-radius: 0px 0px 279px 279px;
+        height: 263px;
+        width: 255px;
+    }
+
+    .imgeandheading {
+        display: flex;
+        justify-content: center;
+    }
+
+    .headerdiv {
+        padding: 0% 0px 0% 0%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .headerdiv h1 {
+        width: 257px;
+    }
+
+    #aboutmain {
+        margin-top: 0px;
+    }
+
+    .upper h3 {
+        font-size: 39px;
+        text-align: center;
+    }
+
+    .divupper {
+        padding: 5% 6% 0%;
+        gap: 25px;
+    }
+
+    .upper p {
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .middel h3 {
+        font-size: 22px;
+    }
+
+    .middel p {
+        line-height: 29px;
+        font-size: 16px;
+    }
+
+    .lower {
+        font-size: 16px;
+    }
+
+    .absocial ul {
+        justify-content: center;
+    }
+
+
+}
+
+@media only screen and (max-width: 380px) {
+/* about element css */
+.imgeandheading img {
+    border-radius: 0px 0px 279px 279px;
+    height: 100px;
+    width: 100px;
+}
+
+.headerdiv h1 {
+    font-size: 10px;
+width: 30%;
+}
+
+    .upper h3 {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .lower {
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    .divupper {
+        padding: 3% 2%;
+        gap: 7px;
+    }
+
+    .lower ul:last-child{
+        display: none;
+    }
+
+}
+
+
+@media screen and (max-width: 380px)
+{
+    .lower {
+        margin-top: 0%;
+    }
+
+    .headerdiv h1 {
+        font-size: 16px;
+        width: 40%;
+    }
+    .imgeandheading img {
+        border-radius: 0px 0px 279px 279px;
+        height: 144px;
+        width: 132px;
+    }
+
+    .lower ul li {
+        font-size: 11px;
+    }
+
+    .upper h4{
+        font-size: 15px;
+    }
+
+      /* projects css */
+
+    #expmainTitle {
+        font-size: 20px;
+    }
+
+    .expcacard {
+        padding: 3%;
+    }
+
+    .fp-slides {
+        height: 35rem;
+    }
+
+    .expmain {
+        gap: 0rem;
+    }
+
+    .expmain {
+        padding: 6% 1% 0% 1%;
+    }
+
+    .carousel-control-next, .carousel-control-prev{
+        width: 25px;
+    }
+
+    .expara {
+        font-size: 13px;
+    }
+
+    #ipstitle {
+        font-size: 22px;
+    }
+
+}
+
+
+
+@media only screen and (max-width: 280px) {
+/* about element css */
+    #mainTextspan {
+        font-size: 28px;
+    }
+
+    .homeText h4 {
+        font-size: 19px;
+    }
+
+    .cursor {
+        font-size: 32px;
+    }
+
+    .homeText h2 {
+        font-size: 10px;
+    }
+
+    .homeText {
+        line-height: 80pxx;
+    }
+
+    #downloadButton button {
+        font-size: 16px;
+    }
+
+    .divupper {
+        padding: 1% 1%;
+        gap: 13px;
+    }
+
+    .upper {
+        gap: 6px;
+    }
+
+
+    .middel {
+        gap: 5px;
+    }
+
+    .upper h4 {
+        font-size: 12px;
+    }
+
+    #aboutmain {
+        margin-top: 55px;
+    }
+
+    .lower {
+        font-size: 9px;
+        gap: 10px;
+    }
+
+    .headerdiv h1 {
+        width: 53%;
+    }
+}

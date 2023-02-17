@@ -1,0 +1,42 @@
+<%- include("../partials/admin_panel/header.ejs") %>
+
+
+
+
+
+
+  <div id="leftmenubar">
+    <div>
+      welcome
+    </div>
+  </div>
+
+
+  <div id="rightmenubar">
+    <article id="mainBox">
+      main
+    </article>
+
+    <div>
+      <div class="welocme">
+        welcome
+        <br>
+        to admin panel
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+    const stopBrowserBack = callback => {
+      window.history.pushState(null, "", window.location.href);
+      window.onpopstate = () => {
+        window.history.pushState(null, "", window.location.href);
+        callback();
+      };
+    };
+
+    document.getElementsByClassName("nav-link")[0].classList.add("active");
+  </script>
+
+  <%- include("../partials/admin_panel/footer.ejs") %>
