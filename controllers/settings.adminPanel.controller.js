@@ -25,8 +25,12 @@ class AdminSettings{
 
         let getotherSettings = new otherSettings();
         let gOSdata = await getotherSettings.getotherSettings();
+
+        let prodSl = process.env.PRODSL? process.env.PRODSL:35;
+
+        console.log(prodSl);
         
-        res.render("adminSettings", {gISdata, gTSdata, gPdata, gEdata, gAdata, gOSdata});
+        res.render("adminSettings", {gISdata, gTSdata, gPdata, gEdata, gAdata, gOSdata, prodSl});
     } 
 }
 

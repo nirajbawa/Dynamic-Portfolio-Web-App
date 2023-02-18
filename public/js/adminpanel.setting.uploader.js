@@ -94,9 +94,9 @@ let setbtnEvents = () =>{
         console.log( btns[i].firstElementChild);
         btns[i].firstElementChild.addEventListener("click", (e)=>{
             let element = e.target.parentElement.parentElement.parentElement.firstElementChild.firstElementChild.src;
-            console.log(element.slice(35));
+            console.log(element.slice(sl));
             let input = document.getElementById("imgName");
-            input.value = element.slice(35);
+            input.value = element.slice(sl);
         });
         
     }
@@ -106,11 +106,11 @@ let setbtnEvents = () =>{
         // console.log(btns[i]);
         btnd[i].lastElementChild.addEventListener("click", (e)=>{
             let element = e.target.parentElement.parentElement.parentElement.firstElementChild.firstElementChild.src;
-            console.log(element.slice(35));
-            let con = confirm("do you want to delete " + element.slice(35));
+            console.log(element.slice(sl));
+            let con = confirm("do you want to delete " + element.slice(sl));
             if(con)
             {
-                deleteImg(element.slice(35), e.target.parentElement.parentElement.parentElement);
+                deleteImg(element.slice(sl), e.target.parentElement.parentElement.parentElement);
             }  
         });
         
