@@ -41,4 +41,4 @@ let changeVideo = () =>{
 
 
 
-changeVideo();
+// changeVideo();
