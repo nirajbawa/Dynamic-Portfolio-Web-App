@@ -26,7 +26,7 @@ class Home{
         let getotherSettings = new otherSettings();
         let gOSdata = await getotherSettings.getotherSettings();
         
-        res.render("Home", {gISdata, gTSdata, gPdata, edata:gEdata, gAdata, gOSdata});
+        res.render("home", {gISdata, gTSdata, gPdata, edata:gEdata, gAdata, gOSdata});
     }
     async postHome(req, res){
         res.redirect("/*");
