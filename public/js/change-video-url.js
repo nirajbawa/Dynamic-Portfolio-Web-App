@@ -24,7 +24,7 @@ let changeVideo = () =>{
             let random = Math.floor(Math.random() * datalocal.videos.length);
             try{
                 videoele.style.transition = "all 3s ease-out";
-                videoele.src = datalocal.videos[random].video_files[datalocal.videos[random].video_files.length-4].link;
+                videoele.src = datalocal.videos[random].video_files[datalocal.videos[random].video_files.length-3].link;
             }
             catch(e)
             {
@@ -41,4 +41,4 @@ let changeVideo = () =>{
 
 
 
-// changeVideo();
+changeVideo();
