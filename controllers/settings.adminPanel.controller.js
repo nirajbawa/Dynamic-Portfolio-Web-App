@@ -26,7 +26,7 @@ class AdminSettings{
         let getotherSettings = new otherSettings();
         let gOSdata = await getotherSettings.getotherSettings();
 
-        let prodSl = process.env.PRODSL? process.env.PRODSL:35;
+        let prodSl = process.env.PRODSL!=undefined? process.env.PRODSL:35;
 
         console.log(prodSl);
         

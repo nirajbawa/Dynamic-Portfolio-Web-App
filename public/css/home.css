@@ -1,3 +1,4 @@
+
 footer{
     width: auto;
     display: flex;
@@ -576,6 +577,7 @@ footer div a i{
     display: flex;
     flex-direction: row;
     padding: 6% 3% 0% 3%;
+    font-size: 0.8rem;
 }
 
 #expmainTitle{
@@ -601,6 +603,7 @@ footer div a i{
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100%;
 }
 
 
@@ -679,6 +682,7 @@ footer div a i{
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 4%;
     justify-content: center;
 }
 
@@ -691,11 +695,14 @@ footer div a i{
     font-family: Roboto,sans-serif;
     color: black;
     transition: all 0.5s ease-in-out;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
 }
 
 
 .expa img{
-    width: 6rem;
+    width: 30%;
 }
 
 .fp-slides {

@@ -1,5 +1,19 @@
 @media only screen and (max-width: 1024px) {
 
+
+    html{
+        font-size: 85%;
+    }
+
+  
+
+    .expmain {
+        display: flex;
+        flex-direction: row;
+        padding: 9% 3% 0% 3%;
+    }
+    
+
     #mainTextspan {
         font-size: 80px;
     }
@@ -70,6 +84,11 @@
 
     .intmain ul li{
         font-size: 11px;
+    }
+
+    #expl div {
+        width: 25rem;
+        height: 100%;
     }
 
 }
