@@ -36,6 +36,10 @@ html{
 
 @media only screen and (max-width: 420px) {
     html{
-        font-size: 62.5%;
+        font-size: 105.5%;
+    }
+
+    .container form {
+        padding: 0.8rem;
     }
 }

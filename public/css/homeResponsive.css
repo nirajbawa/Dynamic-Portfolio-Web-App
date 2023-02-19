@@ -161,6 +161,7 @@
 
     .conleft {
         gap: 2rem;
+        padding: 6% 2% 0% 1%;
     }
 
     
@@ -460,9 +461,6 @@
 
     /* professional skill section */
 
-    #ipstitle {
-        font-size: 25px;
-    }
 
 
       /* projects css */
@@ -493,6 +491,13 @@
     .expcacard {
         padding: 9%;
     }
+
+    #ipstitle {
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+
+   
 
 }
 
@@ -706,7 +711,7 @@ width: 30%;
       /* projects css */
 
     #expmainTitle {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .expcacard {
@@ -732,11 +737,6 @@ width: 30%;
     .expara {
         font-size: 13px;
     }
-
-    #ipstitle {
-        font-size: 22px;
-    }
-
 }
 
 

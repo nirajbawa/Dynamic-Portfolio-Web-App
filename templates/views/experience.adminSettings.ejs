@@ -10,8 +10,15 @@
 
    
         <% gEdata.forEach( value=>{ %>
-            <div class="card" style="width: 18rem; box-shadow: 0px 0px 9px 4px #dad1d133;">
-              <img src="/images/icons/<%=value.imageurl%>" style="height: 45%;" class="card-img-top" alt="...">
+            <div class="card" style="width: 18rem;">
+              <div style="    display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 13rem;
+              background: #373737;">
+                <img src="/images/icons/<%=value.imageurl%>" class="card-img-top" alt="...">
+              </div>
+              
               <div class="card-body">
                 <p class="card-text" style="text-transform:capitalize"><b><%=value.title%></b></p>
                 <br>

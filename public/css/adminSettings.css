@@ -20,8 +20,8 @@
     padding: 2rem;
     overflow-y: auto;
     flex-wrap: wrap;
-    justify-content: start;
-    gap: 2rem 1rem;
+    justify-content: center;
+    gap: 3rem 3rem;
 }
 
 .modal-dialog{
