@@ -361,6 +361,10 @@
     gap: 5rem;
 }
 
+#expr {
+    height: 70vh;
+}
+
 }
 
 @media only screen and (max-width: 420px) {
@@ -736,6 +740,10 @@ width: 30%;
 
     .expara {
         font-size: 13px;
+    }
+
+    .expara {
+        font-size: 12px;
     }
 }
 

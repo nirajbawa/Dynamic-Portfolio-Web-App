@@ -39,7 +39,7 @@ class Projects {
             if (req.body.imageurl != "" && req.body.message != "" && req.body.visibility != "" && req.body.projecturl !="") {
                 let _id = this.sanitizeString(String(req.params.id));
                 let data = {
-                    imageurl: this.sanitizeString(req.body.imageurl),
+                    imageurl: req.body.imageurl,
                     message: req.body.message,
                     visibility: Number.parseInt(req.body.visibility) == 1 ? true : false,
                     projecturl: req.body.projecturl
@@ -67,7 +67,7 @@ class Projects {
         if (req.body.imageurl && req.body.message && req.body.visibility && req.body.projecturl) {
             if (req.body.imageurl != "" && req.body.message != "" && req.body.visibility != "" && req.body.projecturl!="") {
                 let data = {
-                    imageurl: this.sanitizeString(req.body.imageurl),
+                    imageurl: req.body.imageurl,
                     message: req.body.message,
                     visibility: Number.parseInt(req.body.visibility) == 1 ? true : false,
                     projecturl: req.body.projecturl

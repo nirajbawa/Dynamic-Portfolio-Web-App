@@ -1,6 +1,10 @@
+const otherSettings = require("../controllers/otherSettings.settings.adminPanel.controller");
+
 class PageNotFound{
     async getHome(req, res){
-            res.render("404");
+            let getotherSettings = new otherSettings();
+            let gOSdata = await getotherSettings.getotherSettings();  
+            res.render("404", {gOSdata});
     }
 }
 

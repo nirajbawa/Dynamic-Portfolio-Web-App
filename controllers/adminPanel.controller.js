@@ -1,6 +1,10 @@
+const otherSettings = require("../controllers/otherSettings.settings.adminPanel.controller");
+
 class adminPanel{
-    getHome(req, res){    
-        res.render("adminPanel");
+    async getHome(req, res){  
+        let getotherSettings = new otherSettings();
+        let gOSdata = await getotherSettings.getotherSettings();  
+        res.render("adminPanel", {gOSdata});
     } 
 }
 

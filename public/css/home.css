@@ -1,3 +1,8 @@
+html{
+    font-size: 100%;
+}
+
+
 
 footer{
     width: auto;
@@ -824,4 +829,12 @@ footer div a i{
 
 .confteldiv div:first-child{
     width: 140px;
+}
+
+.ctbtn {
+    font-size: 1rem;
+}
+
+.expara {
+    font-size: 0.9rem;
 }

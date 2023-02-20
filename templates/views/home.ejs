@@ -20,7 +20,7 @@
 		<div id="fullpage">
 
 			<script>
-				var text = "<%-gOSdata[0].url2%>";
+				var text = "<%-gOSdata[1].url2%>";
 				var keywords =  <%-gOSdata[2].url4%>;
 			</script>
 
@@ -30,8 +30,8 @@
 				<div class="homeText">
 					<h4>hello! my name is,</h4>
 					<h1 id="headingText"><span id="mainTextspan"></span> <span class="cursor">|</span></h1>
-					<h2><%-gOSdata[0].message%></h2>
-					<a href="<%-gOSdata[0].url1%>" target="_blank" id="downloadButton" draggable="false"><button><%-gOSdata[0].url4%></button></a>
+					<h2><%-gOSdata[1].message%></h2>
+					<a href="<%-gOSdata[1].url1%>" target="_blank" id="downloadButton" draggable="false"><button><%-gOSdata[1].url4%></button></a>
 				</div>
 
 			</div>
@@ -79,7 +79,7 @@
 	
 								<div class="item">
 									<div class="interpersonalSkillCard">
-										<h3><img src="images/icons/<%=values.imageurl%>" alt="icon1"></h3>
+										<h3><img src="http://res.cloudinary.com/dcb6xqdug/image/upload/v1676822178/<%=values.imageurl%>" alt="icon1"></h3>
 										<p>
 											<%-values.message%>
 										</p>
@@ -115,7 +115,7 @@
 	
 								<div class="item">
 									<div class="interpersonalSkillCard">
-										<h3><img src="images/icons/<%=values.imageurl%>" alt="icon1"></h3>
+										<h3><img src="http://res.cloudinary.com/dcb6xqdug/image/upload/v1676822178/<%=values.imageurl%>" alt="icon1"></h3>
 										<p>
 											<%-values.message%>
 										</p>
@@ -158,7 +158,7 @@
 	
 								<div class="item">
 									<div class="interpersonalSkillCard">
-										<h3><img src="images/icons/<%=values.imageurl%>" alt="icon1"></h3>
+										<h3><img src="http://res.cloudinary.com/dcb6xqdug/image/upload/v1676822178/<%=values.imageurl%>" alt="icon1"></h3>
 										<p>
 											<%-values.message%>
 										</p>
@@ -209,7 +209,7 @@
 
 											<div class="expcacard">
 												<div>
-													<a href="<%=edata[i].cpurl%>" target="_blank" draggable="false" class="expa"><img src="images/icons/<%=edata[i].imageurl%>" alt="" draggable="false"><%=edata[i].title%></a>
+													<a href="<%=edata[i].cpurl%>" target="_blank" draggable="false" class="expa"><img src="http://res.cloudinary.com/dcb6xqdug/image/upload/v1676822178/<%=edata[i].imageurl%>" alt="" draggable="false"><%=edata[i].title%></a>
 													<p><%=edata[i].timeperiod%></p>
 													<p class="expara">
 														<%-edata[i].message%>
@@ -224,7 +224,7 @@
 
 											<div class="expcacard">
 												<div>
-													<a href="<%=edata[i].cpurl%>" target="_blank" draggable="false" class="expa"><img src="images/icons/<%=edata[i].imageurl%>" alt="" draggable="false"><%edata[i].title%></a>
+													<a href="<%=edata[i].cpurl%>" target="_blank" draggable="false" class="expa"><img src="http://res.cloudinary.com/dcb6xqdug/image/upload/v1676822178/<%=edata[i].imageurl%>" alt="" draggable="false"><%edata[i].title%></a>
 													<p><%=edata[i].timeperiod%></p>
 													<p class="expara">
 														<%-edata[i].message%>

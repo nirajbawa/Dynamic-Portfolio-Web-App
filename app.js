@@ -7,7 +7,7 @@ const path = require("path");
 const session = require('express-session');
 const cookieParser = require("cookie-parser");
 const bodyParser = require('body-parser');
-
+const fileUpload = require("express-fileupload");
 
 const app = express();
 const port = process.env.PORT || 8000;
@@ -23,6 +23,10 @@ const staticPath = path.join(__dirname, "/public");
 app.use(express.static(staticPath));
 
 //middlewares 
+
+app.use(fileUpload({
+    useTempFiles:true
+}));
 
 // body parser
 

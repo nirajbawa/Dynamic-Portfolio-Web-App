@@ -5,6 +5,7 @@ const Experience = require("./experience.settings.adminPanel.controller");
 const About = require("./about.settings.adminPanel.controller");
 const otherSettings = require("../controllers/otherSettings.settings.adminPanel.controller");
 
+
 class AdminSettings{
     async getSettings(req, res){    
         let getInterpersonalSkills = new InterpersonalSkills();
@@ -26,9 +27,7 @@ class AdminSettings{
         let getotherSettings = new otherSettings();
         let gOSdata = await getotherSettings.getotherSettings();
 
-        let prodSl = process.env.PRODSL!=undefined? process.env.PRODSL:35;
-
-        console.log(prodSl);
+        let prodSl = 61;
         
         res.render("adminSettings", {gISdata, gTSdata, gPdata, gEdata, gAdata, gOSdata, prodSl});
     } 

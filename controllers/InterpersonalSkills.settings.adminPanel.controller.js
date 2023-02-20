@@ -39,7 +39,7 @@ class InterpersonalSkills {
             if (req.body.imageurl != "" && req.body.message != "" && req.body.visibility != "") {
                 let _id = this.sanitizeString(String(req.params.id));
                 let data = {
-                    imageurl: this.sanitizeString(req.body.imageurl),
+                    imageurl: req.body.imageurl,
                     message: req.body.message,
                     visibility: Number.parseInt(req.body.visibility) == 1 ? true : false
                 }
@@ -66,7 +66,7 @@ class InterpersonalSkills {
         if (req.body.imageurl && req.body.message && req.body.visibility) {
             if (req.body.imageurl != "" && req.body.message != "" && req.body.visibility != "") {
                 let data = {
-                    imageurl: this.sanitizeString(req.body.imageurl),
+                    imageurl: req.body.imageurl,
                     message: req.body.message,
                     visibility: Number.parseInt(req.body.visibility) == 1 ? true : false
                 }

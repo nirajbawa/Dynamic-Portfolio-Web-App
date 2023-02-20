@@ -39,7 +39,7 @@ class About {
             if (req.body.imageurl != "" && req.body.title != "" && req.body.visibility != "" && req.body.htmlcontent!="") {
                 let _id = this.sanitizeString(String(req.params.id));
                 let data = {
-                    imageurl: this.sanitizeString(req.body.imageurl),
+                    imageurl: req.body.imageurl,
                     title: this.sanitizeString(req.body.title),
                     visibility: Number.parseInt(req.body.visibility) == 1 ? true : false,
                     htmlcontent: req.body.htmlcontent
@@ -67,7 +67,7 @@ class About {
         if (req.body.imageurl && req.body.title && req.body.visibility && req.body.htmlcontent) {
             if (req.body.imageurl != "" && req.body.title != "" && req.body.visibility != "" && req.body.htmlcontent!="") {
                 let data = {
-                    imageurl: this.sanitizeString(req.body.imageurl),
+                    imageurl: req.body.imageurl,
                     title: this.sanitizeString(req.body.title),
                     visibility: Number.parseInt(req.body.visibility) == 1 ? true : false,
                     htmlcontent: req.body.htmlcontent

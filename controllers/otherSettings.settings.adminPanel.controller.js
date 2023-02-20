@@ -39,7 +39,7 @@ class otherSettings {
             if (req.body.visibility != "" && req.body.title!="") {
                 let _id = this.sanitizeString(String(req.params.id));
                 let data = {
-                    imageurl: this.sanitizeString(req.body.imageurl),
+                    imageurl: req.body.imageurl,
                     message: req.body.message,
                     visibility: Number.parseInt(req.body.visibility) == 1 ? true : false,
                     url1:req.body.url1,
@@ -71,7 +71,7 @@ class otherSettings {
         if (req.body.imageurl && req.body.message && req.body.visibility && req.body.url1 && req.body.url2 && req.body.url3 && req.body.url4 && req.body.title) {
             if (req.body.visibility != "" && req.body.title!="") {
                 let data = {
-                    imageurl: this.sanitizeString(req.body.imageurl),
+                    imageurl: req.body.imageurl,
                     message: req.body.message,
                     visibility: Number.parseInt(req.body.visibility) == 1 ? true : false,
                     url1:req.body.url1,

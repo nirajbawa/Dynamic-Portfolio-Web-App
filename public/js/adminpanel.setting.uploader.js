@@ -39,7 +39,7 @@ document.body.onload = async() =>{
 
 let createImages = (name, i) =>{
     let images = document.createElement("img");
-    images.src = `/images/icons/${name}`;
+    images.src = `http://res.cloudinary.com/dcb6xqdug/image/upload/v1676822178/${name}`;
 
     let divimg = document.createElement("div");
     divimg.className = "imgdiv";
@@ -110,7 +110,7 @@ let setbtnEvents = () =>{
             let con = confirm("do you want to delete " + element.slice(sl));
             if(con)
             {
-                deleteImg(element.slice(sl), e.target.parentElement.parentElement.parentElement);
+                deleteImg(element.slice(sl+18), e.target.parentElement.parentElement.parentElement);
             }  
         });
         
@@ -133,7 +133,9 @@ let uplodaImage = async(e) =>{
         let res = await send.json();
         console.log((res));
         e.target.reset();
-        document.getElementById("alertupimg").classList.add("show");
+        let altbox = document.getElementById("alertupimg");
+        altbox.classList.add("show");
+        altbox.innerText = res.msg;
         try{
             console.log("hii");
             let data = await fetch("/admin/panel/settings/uploader");
@@ -142,6 +144,9 @@ let uplodaImage = async(e) =>{
             setimages(parsedData.images);
         }
         catch(error){
+            let altbox = document.getElementById("alertupimg");
+            altbox.classList.add("show");
+            altbox.innerText = error.msg;
             console.error(error);
         }
 
@@ -153,6 +158,7 @@ let uplodaImage = async(e) =>{
 
 
 let deleteImg = async (imgName, id) =>{
+    console.log(imgName);
     try{
         let deleteReq = await fetch(`/admin/panel/settings/uploader/${imgName}`, {method:"DELETE"});
         let deleteRes = await deleteReq.json();

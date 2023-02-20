@@ -39,7 +39,7 @@ class Experience {
             if (req.body.imageurl != "" && req.body.message != "" && req.body.visibility != "" && req.body.title!="" && req.body.timeperiod!="" && req.body.cpurl!="" && req.body.certificate != "") {
                 let _id = this.sanitizeString(String(req.params.id));
                 let data = {
-                    imageurl: this.sanitizeString(req.body.imageurl),
+                    imageurl: req.body.imageurl,
                     message: req.body.message,
                     visibility: Number.parseInt(req.body.visibility) == 1 ? true : false,
                     title: this.sanitizeString(req.body.title),
@@ -70,7 +70,7 @@ class Experience {
         if (req.body.imageurl && req.body.message && req.body.visibility && req.body.title && req.body.timeperiod && req.body.cpurl && req.body.certificate) {
             if (req.body.imageurl != "" && req.body.message != "" && req.body.visibility != "" && req.body.title!="" && req.body.timeperiod!="" && req.body.cpurl!="" && req.body.certificate != "") {
                 let data = {
-                    imageurl: this.sanitizeString(req.body.imageurl),
+                    imageurl: req.body.imageurl,
                     message: req.body.message,
                     visibility: Number.parseInt(req.body.visibility) == 1 ? true : false,
                     title: this.sanitizeString(req.body.title),
