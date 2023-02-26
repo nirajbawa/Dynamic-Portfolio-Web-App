@@ -745,6 +745,9 @@ width: 30%;
     .expara {
         font-size: 12px;
     }
+    .expcacard div {
+        padding: 7%;
+    }
 }
 
 
