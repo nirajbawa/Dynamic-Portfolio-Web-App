@@ -5,7 +5,7 @@ class otherSettings {
 
     async getotherSettings() {
         try {
-            const data = await aboutModel.find();
+            const data = await aboutModel.find().sort({ timestamp: -1 });
             return data
         }
         catch {
