@@ -11,8 +11,11 @@ let changeVideo = () =>{
 
 
     let rand = Math.floor(Math.random() * keywords.length);
-
-    fetch(`https://api.pexels.com/videos/search?query=${keywords[rand]}`)
+    fetch(` https://api.pexels.com/videos/search?query=${keywords[rand]}`,
+     {method:"GET" , headers: {
+        Accept: "application/json",
+        Authorization: 'rpyKXFrH5pAfkxwB9aGtD3c0YF49Uzr8xf8OuPRDWKnWCH2xZaJ5yIBF',  
+    }})
     .then((response)=>{
         return response.json();
     })
@@ -34,7 +37,7 @@ let changeVideo = () =>{
 
             
             
-        }, 25000);
+        }, videoTime);
 
     })
 }

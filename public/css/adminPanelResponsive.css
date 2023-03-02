@@ -46,7 +46,7 @@
     }
 
     .fccard{
-        width: 34rem !important;
+        width: 28rem !important;
     }
 }
 
@@ -86,7 +86,9 @@
         align-items: center;
     }
     
-
+    .fccard{
+        width: 25rem !important;
+    }
     
    
 
