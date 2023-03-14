@@ -2,15 +2,11 @@ console.log("contact");
 
 let from = document.getElementById("contactform");
 
-console.log(from);
-
 from.addEventListener("submit", async(e) => {
     e.preventDefault();
-    console.log("yes");
     let newData = new FormData(e.target);
     let data = {}
     newData.forEach((value, key) => (data[key] = value));
-    console.log(data);
     let s = await sendForm(data);
     if(s!==false)
     {
