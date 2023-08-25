@@ -213,7 +213,10 @@
 							<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 							<div class="carousel-inner">
 
+	
+
 								<%for(let i = 0; i<edata.length; i++){%>
+									
 									<%if(edata[i].visibility==true){%>
 									<%if(i==0){%>
 										<div class="carousel-item active">
@@ -235,7 +238,7 @@
 
 											<div class="expcacard">
 												<div>
-													<a href="<%=edata[i].cpurl%>" target="_blank" draggable="false" class="expa"><img src="http://res.cloudinary.com/dcb6xqdug/image/upload/v1676822178/<%=edata[i].imageurl%>" alt="" draggable="false"><%edata[i].title%></a>
+													<a href="<%=edata[i].cpurl%>" target="_blank" draggable="false" class="expa"><img src="http://res.cloudinary.com/dcb6xqdug/image/upload/v1676822178/<%=edata[i].imageurl%>" alt="" draggable="false"><%=edata[i].title%></a>
 													<p><%=edata[i].timeperiod%></p>
 													<p class="expara">
 														<%-edata[i].message%>
