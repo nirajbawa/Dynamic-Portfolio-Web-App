@@ -2,6 +2,16 @@
 
 	<%- include("../partials/main/navbar.ejs") %>
 
+
+		<!-- owl carousel cdn -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+			integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+			integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 		<!-- video background -->
 		<div class="video-cover">
 			<div class="video-contiainer" id="cont">
@@ -342,9 +352,9 @@
 		<footer>
 			
 			<div id="socialicons">
-				<a href="https://in.linkedin.com/in/niraj-bava-a68867210" target="__blank__"><i class="fa fa-github"
+				<a href="<%=gOSdata[1].url3%>" target="__blank__"><i class="fa fa-github"
 						aria-hidden="true"></i></a>
-				<a href="https://github.com/nirajbawa" target="__blank__"><i class="fa fa-linkedin"
+				<a href="<%=gOSdata[1].url2%>" target="__blank__"><i class="fa fa-linkedin"
 						aria-hidden="true"></i></a>
 			</div>
 		</footer>
@@ -356,14 +366,7 @@
 
 
 
-		<!-- owl carousel cdn -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-			integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
-			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-			integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+	
 
 		<script>
 

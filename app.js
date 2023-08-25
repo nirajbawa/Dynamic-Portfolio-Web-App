@@ -10,10 +10,10 @@ const bodyParser = require('body-parser');
 const fileUpload = require("express-fileupload");
 
 const app = express();
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 5000;
 
 // define view engine settings
-app.set("view engine", "ejs")
+app.set("view engine", "ejs");
 
 const templatesPath = path.join(__dirname, "/templates/views/");
 app.set("views", templatesPath);
