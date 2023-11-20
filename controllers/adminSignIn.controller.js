@@ -20,7 +20,7 @@ class AdminSignIn {
             if (req.session.otpsignin == undefined && req.session.signindata == undefined) {
                 if (req.body.email && req.body.password && req.body.email != "" && req.body.password != "") {
                     if (validator.isEmail(req.body.email)) {
-                        let spassword = this.sanitizeString(String(req.body.password));
+                        let spassword = String(req.body.password);
                         if (spassword.length > 8) {
                             let checkUser = await AdminUserSchemaModel.find({ email: req.body.email });
                             console.log(checkUser);
