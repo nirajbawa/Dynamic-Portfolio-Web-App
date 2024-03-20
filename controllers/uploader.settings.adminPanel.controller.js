@@ -10,20 +10,23 @@ cloudinary.config({
 
 class Uploader {
     async sendImageList(req, res) {
-    
+
         try {
             const result = await cloudinary.v2.api.resources({
-                folder: 'Portfolio_Web_App/',
-                max_results:500
-            })
-            let list = result.resources.map(value=>{
+                type: 'upload',
+                prefix: 'Portfolio_Web_App/', // Use prefix instead of folder
+                max_results: 500
+            });
+
+            let list = result.resources.map(value => {
                 return value.public_id;
             })
-            res.send({images:list});
+            console.log(list)
+            res.send({ images: list });
         }
         catch (e) {
             console.log(e);
-            res.status(404).send({msg:"error"});
+            res.status(404).send({ msg: "error" });
         }
     }
 
@@ -31,41 +34,38 @@ class Uploader {
         try {
             console.log(req.params.id);
             let result = await cloudinary.v2.api.delete_resources([`Portfolio_Web_App/${req.params.id}`]);
-            res.send({ msg: `${req.params.id} deleted`});
+            res.send({ msg: `${req.params.id} deleted` });
         }
         catch (e) {
             console.log(e);
             res.status(404).send();
         }
-     
+
     }
 
     async UploadImage(req, res) {
-        try{ 
-            if(req.files.imgfile!=undefined)
-            {
-                if(req.files.imgfile.mimetype=="image/jpeg" || req.files.imgfile.mimetype=="image/png" || req.files.imgfile.mimetype=="image/jpg" || req.files.imgfile.mimetype=="image/x-icon" || req.files.imgfile.mimetype=="image/webp" )
-                {
-                    if(req.files.imgfile.size<101000000)
-                    {
+        try {
+            if (req.files.imgfile != undefined) {
+                if (req.files.imgfile.mimetype == "image/jpeg" || req.files.imgfile.mimetype == "image/png" || req.files.imgfile.mimetype == "image/jpg" || req.files.imgfile.mimetype == "image/x-icon" || req.files.imgfile.mimetype == "image/webp") {
+                    if (req.files.imgfile.size < 101000000) {
                         const file = req.files.imgfile;
                         const result = await cloudinary.v2.uploader.upload(file.tempFilePath, { folder: "/Portfolio_Web_App/", public_id: this.safeFilename(this.getExt(req.files.imgfile.name)[0]) });
-                        res.send({msg:"Success, Image uploaded!"});
-                    }else{
-                        res.status(404).send({msg:"error : file size is too large make sure your file is less than 100 MB"});
+                        res.send({ msg: "Success, Image uploaded!" });
+                    } else {
+                        res.status(404).send({ msg: "error : file size is too large make sure your file is less than 100 MB" });
                     }
                 }
-                else{
-                    res.status(404).send({msg:"error : extension not allowed"});
+                else {
+                    res.status(404).send({ msg: "error : extension not allowed" });
                 }
             }
-            else{
-                res.status(404).send({msg:"error"});
+            else {
+                res.status(404).send({ msg: "error" });
             }
         }
-        catch(e){
+        catch (e) {
             console.log(e);
-            res.status(404).send({msg:"error"});
+            res.status(404).send({ msg: "error" });
         }
     }
 
@@ -74,12 +74,11 @@ class Uploader {
         return str.trim();
     }
 
-    safeFilename(str){
+    safeFilename(str) {
         return str.replace(/[^a-z0-9]/gi, '_').toLowerCase();
     }
 
-    getExt(str)
-    {
+    getExt(str) {
         return str.split(".");
     }
 }
