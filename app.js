@@ -62,6 +62,4 @@ app.use("/admin/",adminLogin);
 app.use("/admin/panel", adminDashboard);
 app.use(pageNotFound);
 
-app.listen(port,()=>{
-    console.log("http://127.0.0.1:"+port);
-});
+module.exports = app;
