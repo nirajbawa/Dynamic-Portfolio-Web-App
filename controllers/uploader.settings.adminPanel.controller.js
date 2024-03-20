@@ -21,7 +21,6 @@ class Uploader {
             let list = result.resources.map(value => {
                 return value.public_id;
             })
-            console.log(list)
             res.send({ images: list });
         }
         catch (e) {
